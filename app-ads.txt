@@ -1,6 +1,6 @@
 google.com, pub-1114757923146718, DIRECT, f08c47fec0942fa0
 
-facebook.com, 2069966393281547, RESELLER, c3e20eee3f780d68
+facebook.com, 917181140904067, DIRECT, c3e20eee3f780d68
 
 themediagrid.com, FALINO, RESELLER, 9fac4a4a87c2a44f
 appads.in, 106246, RESELLER
