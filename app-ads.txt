@@ -1,5 +1,7 @@
 google.com, pub-1114757923146718, DIRECT, f08c47fec0942fa0
 
+facebook.com, 2069966393281547, DIRECT, c3e20eee3f780d68
+
 themediagrid.com, FALINO, RESELLER, 9fac4a4a87c2a44f
 appads.in, 106246, RESELLER
 inmobi.com, 23d316d3d980453d8ea0dcf9caec4078, RESELLER, 83e75a7ae333ca9d
