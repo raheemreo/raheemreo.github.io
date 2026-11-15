@@ -1,0 +1,27 @@
+# ScoreIQ verified Android App Links — deployment checklist
+
+Production website: https://raheemreo.github.io/score_iq_web/
+Verified app-link host: raheemreo.github.io
+Required file: https://raheemreo.github.io/.well-known/assetlinks.json
+Android package: com.reotech.scoreiq
+
+## Why a root repository?
+GitHub Pages project sites live under /score_iq_web/, but Android Digital Asset Links checks /.well-known/assetlinks.json **at the domain root**. Therefore the assetlinks file must be deployed through this root Pages repository or another host-root mechanism.
+
+## Manual prerequisite (BLOCKING)
+Open Google Play Console → ScoreIQ → Test and release → App integrity → App signing key certificate. Copy the **SHA-256** fingerprint, not the SHA-1 or upload-key fingerprint.
+
+This branch intentionally provides only docs/scoreiq-assetlinks.template.json. Do **not** publish an invalid placeholder as the root .well-known/assetlinks.json.
+
+## Publish procedure (requires explicit permission)
+1. Confirm this repository is the production GitHub Pages root for raheemreo.github.io.
+2. Copy docs/scoreiq-assetlinks.template.json to .well-known/assetlinks.json, replacing the placeholder with the real Play App Signing SHA-256 in XX:XX:... format.
+3. Add an empty .nojekyll file if the publish source needs it, so .well-known is served.
+4. Preserve existing ads.txt and app-ads.txt (do not edit them).
+5. Deploy/merge only after explicit GitHub Pages production approval.
+6. Confirm direct, unredirected HTTPS 200 for https://raheemreo.github.io/.well-known/assetlinks.json and valid JSON.
+7. Check Android: adb shell pm verify-app-links --re-verify com.reotech.scoreiq; adb shell pm get-app-links com.reotech.scoreiq.
+8. Verify the application is signed with the Play signing key; debug-key app installs may not match the JSON.
+9. Check Play Console Deep links after the Play-signed updated release rolls out.
+
+Note: Only five app-link website paths under /score_iq_web/open/ are registered in the Android app. Existing privacy, terms, data deletion, and support links should continue opening in the browser.
