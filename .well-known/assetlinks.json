@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.reotech.scoreiq",
+      "sha256_cert_fingerprints": [
+        "E9:DD:9F:2D:20:83:33:2F:C7:B3:A9:07:91:75:12:E8:DB:63:80:B2:06:73:09:08:B3:94:4F:70:77:0A:96:2A"
+      ]
+    }
+  }
+]
